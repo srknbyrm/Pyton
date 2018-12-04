@@ -1,0 +1,105 @@
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+"""
+Created on Tue Dec  4 16:59:02 2018
+
+@author: Serkan BAYRAM 
+"""
+
+"Pyton Basics "
+
+
+sayi1 = 1.5
+sayi2 = 4
+
+print(sayi1 + sayi2);
+
+ad = "serkan"
+soyad = "bayram"
+dYeri = "Izmir"
+
+serkan = ad + " " + soyad + " " + dYeri
+print(serkan);
+uzunluk = len(serkan)
+
+print(serkan," metinin bosluklar dahil uzunlugu: ",uzunluk)
+
+#sayiyi yukariya yuvarlama
+print(round(sayi1));
+
+tamSayi = int(sayi1);
+print(tamSayi);
+
+
+#fonksiyonlar 
+
+def toplam(sayi1,sayi2):
+    toplam = sayi1 + sayi2;
+    return toplam;
+
+toplam = toplam(5,4);
+print(toplam);
+    
+def yazdir(var):
+    print(var);
+    
+yazdir(ad);
+#flexible func
+def carpma(sayi1,sayi2,*args):
+    # if else conditions
+    if len(args) == 0:
+        sonuc = sayi1 * sayi2
+    elif len(args) == 1:
+        sonuc = sayi1 * sayi2 * args[0];
+    else:
+        sonuc = "To much parameter"
+    
+    print(sonuc);
+    
+carpma(5,4,3,0,1,2,2,3,4)
+carpma(5,4,0)
+carpma(5,4)
+
+#lambda func
+
+powerOfThree = lambda x : x*x*x  ;
+print(powerOfThree(5));
+
+#list
+
+listeYas = [22,43,34,11,23];
+listeGun = ["Pazartesi","Sali"];
+listeYas.sort();
+
+print(listeYas[0]);
+print(listeGun[0]);
+
+#0 dan 3 e kadar al 3 dahil degil
+s = listeYas[0:3];
+
+# for loop
+for yas in s:
+    print(yas);
+    
+s.append(3)
+s.pop(0)
+s.insert(0,1)
+
+# while loop
+i = 0;
+while(i < len(s)):
+    print(s[i]);
+    i = i + 1;
+    
+    
+
+#dictionary
+
+dictionary = {"Ali" : 32 , "Veli" : 49};
+
+print(dictionary["Ali"]);
+
+
+
+
+
